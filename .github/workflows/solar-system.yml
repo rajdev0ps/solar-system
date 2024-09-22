@@ -210,7 +210,7 @@ jobs:
               URL: ${{ needs.dev-deploy.outputs.application-url }}
             run: |
               echo $URL
-              echo "--------------------------------------------"
+              echo "----------------------------------------------"
               curl https://$URL/live -s -k | jq -r .status | grep -i live
 
     prod-deploy:
